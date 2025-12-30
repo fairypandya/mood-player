@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Mood Player</title>
+
+ <style>
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url("https://plus.unsplash.com/premium_photo-1682125896993-12a1758b6cb3?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+.container {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  padding: 40px 50px;
+  border-radius: 30px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.35);
+  text-align: center;
+  max-width: 450px;
+}
+
+
+button {
+  border: none;
+  border-radius: 999px;
+  padding: 10px 18px;
+  margin: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  color: black;
+}
+.mood-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap; 
+}
+
+
+/* Button colors */
+button:nth-of-type(1) { background: #6c9bcf; }
+button:nth-of-type(2) { background: #e85d5d; }
+button:nth-of-type(3) { background: #d87ca1; }
+button:nth-of-type(4) { background: #6b6b83; }
+button:nth-of-type(5) { background: #afaf41; }
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+</style>
+
+</head>
+
+<body>
+  <div class="container">
+    <h1 id="title">How are you feeling?</h1>
+    <div class="mood-buttons">
+    <button onclick="goToMood('calm')">Calm</button>
+    <button onclick="goToMood('angry')">Angry</button>
+    <button onclick="goToMood('romantic')">Romantic</button>
+    <button onclick="goToMood('sad')">Sad</button>
+    <button onclick="goToMood('happy')">Happy</button>
+      </div>
+   
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
